@@ -105,7 +105,7 @@ public enum GmsService {
     FIREBASE_AUTH(112, BuildConfig.BASE_PACKAGE_NAME + ".firebase.auth.api.gms.service.START"),
     APP_INDEXING(113),
     GASS(116, BuildConfig.BASE_PACKAGE_NAME + ".android.gms.gass.START"),
-    WORK_ACCOUNT(120 BuildConfig.BASE_PACKAGE_NAME + ".android.gms.auth.account.workaccount.START"),
+    WORK_ACCOUNT(120, BuildConfig.BASE_PACKAGE_NAME + ".android.gms.auth.account.workaccount.START"),
     INSTANT_APPS(121, BuildConfig.BASE_PACKAGE_NAME + ".android.gms.instantapps.START"),
     CAST_FIRSTPATY(122, BuildConfig.BASE_PACKAGE_NAME + ".android.gms.cast.firstparty.START"),
     AD_CACHE(123, BuildConfig.BASE_PACKAGE_NAME + ".android.gms.ads.service.CACHE"),
