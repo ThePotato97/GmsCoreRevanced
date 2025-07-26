@@ -10,12 +10,12 @@ import android.os.Handler
 import android.os.Looper
 import android.webkit.WebView
 import com.google.android.gms.base.BuildConfig
-const val ACTION_LOCATION_SHARING = "com.google.android.gms.location.settings.LOCATION_SHARING"
-const val ACTION_SECURITY_SETTINGS = "com.google.android.gms.accountsettings.SECURITY_SETTINGS"
-const val ACTION_PRIVACY_SETTINGS = "com.google.android.gms.accountsettings.PRIVACY_SETTINGS"
-const val ACTION_ACCOUNT_PREFERENCES_SETTINGS = "com.google.android.gms.accountsettings.ACCOUNT_PREFERENCES_SETTINGS"
-const val ACTION_MY_ACCOUNT = "com.google.android.gms.accountsettings.MY_ACCOUNT"
-const val ACTION_BROWSE_SETTINGS = "com.google.android.gms.accountsettings.action.BROWSE_SETTINGS"
+const val ACTION_LOCATION_SHARING = BuildConfig.BASE_PACKAGE_NAME + ".android.gms.location.settings.LOCATION_SHARING"
+const val ACTION_SECURITY_SETTINGS = BuildConfig.BASE_PACKAGE_NAME + ".android.gms.accountsettings.SECURITY_SETTINGS"
+const val ACTION_PRIVACY_SETTINGS = BuildConfig.BASE_PACKAGE_NAME + ".android.gms.accountsettings.PRIVACY_SETTINGS"
+const val ACTION_ACCOUNT_PREFERENCES_SETTINGS = BuildConfig.BASE_PACKAGE_NAME + ".android.gms.accountsettings.ACCOUNT_PREFERENCES_SETTINGS"
+const val ACTION_MY_ACCOUNT = BuildConfig.BASE_PACKAGE_NAME + ".android.gms.accountsettings.MY_ACCOUNT"
+const val ACTION_BROWSE_SETTINGS = BuildConfig.BASE_PACKAGE_NAME + ".android.gms.accountsettings.action.BROWSE_SETTINGS"
 
 const val ACTION_BROWSE_SETTINGS = BuildConfig.BASE_PACKAGE_NAME + ".android.gms.accountsettings.action.BROWSE_SETTINGS"
 const val ACTION_MY_ACCOUNT = BuildConfig.BASE_PACKAGE_NAME + ".android.gms.accountsettings.MY_ACCOUNT"
