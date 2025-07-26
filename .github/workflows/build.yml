@@ -9,6 +9,8 @@ jobs:
   build:
     name: "Gradle build"
     runs-on: ubuntu-latest
+    env:
+      GRADLE_MICROG_VERSION_WITHOUT_GIT: 1
 
     steps:
       - name: "Checkout sources"
@@ -20,12 +22,13 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "17"
-      - name: "Gradle Wrapper validation"
-        uses: gradle/wrapper-validation-action@v2
       - name: "Setup Gradle"
-        uses: gradle/actions/setup-gradle@v3
-      - name: Cache Gradle
-        uses: burrunan/gradle-cache-action@v1
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-encryption-key: ${{ secrets.GradleEncryptionKey }}
+          build-scan-publish: true
+          build-scan-terms-of-use-url: "https://gradle.com/help/legal-terms-of-use"
+          build-scan-terms-of-use-agree: "yes"
       - name: "Setup matchers"
         run: |
           # Setting up matchers...
@@ -44,6 +47,6 @@ jobs:
             fi
           done
       - name: "Execute Gradle assemble"
-        run: "./gradlew --no-daemon assemble"
+        run: "./gradlew assemble"
       - name: "Execute Gradle check"
-        run: "./gradlew --no-daemon check"
+        run: "./gradlew check"
